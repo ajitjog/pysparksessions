@@ -1,0 +1,5 @@
+{"invno":1,"invdate":"2019-10-01","invamt":70000,"custid":"c101","InvPaymentBy":"2019-10-16","discount":7000.0,"invcat":"A","custname":"Anand","creditbal":18000}
+{"invno":2,"invdate":"2019-07-01","invamt":70000,"custid":"c101","InvPaymentBy":"2019-07-16","discount":7000.0,"invcat":"A","custname":"Anand","creditbal":18000}
+{"invno":5,"invdate":"2019-05-01","invamt":20000,"custid":"c102","InvPaymentBy":"2019-05-16","discount":2000.0,"invcat":"B","custname":"Milind","creditbal":27000}
+{"invno":7,"invdate":"2019-12-01","invamt":90000,"custid":"c102","InvPaymentBy":"2019-12-16","discount":9000.0,"invcat":"A","custname":"Milind","creditbal":27000}
+{"invno":11,"invdate":"2019-04-01","invamt":20000,"custid":"c103","InvPaymentBy":"2019-04-16","discount":2000.0,"invcat":"B","custname":"Mandar","creditbal":10000}

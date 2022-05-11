@@ -1,0 +1,5 @@
+invno,invdate,invamt,custid,city
+4,01/03/2019,40000,c103,delhi
+5,01/05/2019,20000,c102,mumbai
+6,01/10/2019,10000,c101,bangalore
+7,01/12/2019,90000,c102,mumbai

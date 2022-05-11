@@ -1,0 +1,2 @@
+{"invno":3,"invdate":"2019-11-01","invamt":50000,"custid":"c103","InvPaymentBy":"2019-11-16","discount":5000.0,"invcat":"A","custname":"Mandar","creditbal":10000}
+{"invno":9,"invdate":"2019-12-01","invamt":30000,"custid":"c101","InvPaymentBy":"2019-12-16","discount":3000.0,"invcat":"B","custname":"Anand","creditbal":18000}

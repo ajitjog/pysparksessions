@@ -1,0 +1,4 @@
+custid,custname,creditbal
+c101,Anand,18000
+c102,Milind,27000
+c103,Mandar,10000

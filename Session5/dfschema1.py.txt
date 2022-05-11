@@ -1,0 +1,51 @@
+import sys
+from pyspark.sql import SparkSession
+
+from pyspark.sql.types import StructType,StructField,StringType,DateType,IntegerType
+
+from pyspark.sql.functions import col,expr
+
+spark = SparkSession.builder.master("local").appName("schemademo").getOrCreate()
+
+custinv_schema = StructType([StructField("invno",IntegerType()),  \
+                            StructField("invdate",DateType()),  \
+                            StructField("invamt",IntegerType()),  \
+                            StructField("custid",StringType()),  \
+                            StructField("city",StringType()) ])
+
+cust_schema = StructType([StructField("custid",StringType()),  \
+                          StructField("custname",StringType()),  \
+                          StructField("creditbal",IntegerType())  ])
+
+
+custinv_df = spark.read. \
+             format("csv"). \
+             option("header",True). \
+             schema(custinv_schema). \
+             option("dateFormat","dd/MM/yyyy"). \
+             load(sys.argv[1])
+
+
+cust_df = spark.read \
+            .format("csv") \
+            .option("header",True) \
+            .schema(cust_schema) \
+            .load(sys.argv[2])
+
+#print(custinv_df.schema.simpleString())
+
+
+custinv_df2 = custinv_df.withColumn("InvPaymentBy",col("invdate") + 15). \
+                         withColumn("discount",custinv_df.invamt * 0.1 ). \
+                         withColumn("invcat",expr("case when invamt >= 50000 then 'A' else 'B' end"))
+
+custinv_df2 = custinv_df2.join(cust_df, cust_df.custid == custinv_df2.custid).drop(cust_df.custid)
+
+custinv_df2.write \
+            .format("json") \
+            .mode("append") \
+            .partitionBy("city") \
+            .option("path","invoices/") \
+            .save()
+
+custinv_df2.show()

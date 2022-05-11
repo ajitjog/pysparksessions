@@ -1,0 +1,6 @@
+orderno,custno,city,orderamt
+1,1,mumbai,5000
+2,2,pune,5000
+3,1,mumbai,6000
+4,2,pune,15000
+5,1,mumbai,7000

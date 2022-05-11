@@ -1,0 +1,13 @@
+orderno,custno,city,orderamt
+1,c101,mumbai,5000
+2,c101,pune,15000
+3,c102,mumbai,25000
+4,c101,pune,15000
+5,c102,mumbai,35000
+6,c101,nashik,25000
+7,c103,bangalore,15000
+8,c101,mumbai,25000
+9,c103,delhi,35000
+10,c101,bangalore,25000
+11,c103,delhi,35000
+12,c101,bangalore,5000

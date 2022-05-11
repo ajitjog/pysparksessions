@@ -1,0 +1,5 @@
+invno,invdate,invamt,custid,city
+8,01/09/2019,60000,c103,bangalore
+9,01/12/2019,30000,c101,pune
+10,01/02/2019,70000,c102,delhi
+11,01/04/2019,20000,c103,mumbai
